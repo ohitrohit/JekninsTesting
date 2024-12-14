@@ -40,60 +40,60 @@ public class BaseClass {
         
     }
 
-    @BeforeMethod()
-    public void bmConfig(){
-
-        
-        String environment = System.getProperty("environment");
-        if (environment == null || environment.isEmpty()) {
-            environment = "DEV"; 
-        }
-        pUtil = new PropertiesFileUtilities(environment);
-
-        
-        String BROWSER = pUtil.getData("Browser");
-
-        if (BROWSER.equalsIgnoreCase("Chrome")) {
-            WebDriverManager.chromedriver().setup();
-            
-            
-            ChromeOptions options = new ChromeOptions();
-            options.setAcceptInsecureCerts(true);  
-            options.addArguments("--ignore-certificate-errors");  
-            options.addArguments("--disable-web-security");  
-            options.addArguments("force-device-scale-factor=1");  
-            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-            options.addArguments("ignore-certificate-errors");
-            options.addArguments("--disable-blink-features=AutomationControlled");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--no-sandbox");
-            //options.addArguments("--headless");
-//            options.addArguments("--disable-gpu"); // Applicable on Windows, but not needed on Linux
-            options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--disable-dev-tools");
-
-            // Add headless option for Linux environments
-            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-                options.addArguments("--headless");  // Run in headless mode for Linux servers
-                options.addArguments("--remote-debugging-port=9222");  // Required for headless mode
-            }
-
-            driver = new ChromeDriver(options);
-            System.out.println("-----Chrome Browser Launched with Security Settings and 100% Zoom-----");
-            
-        } else if (BROWSER.equalsIgnoreCase("Firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-            System.out.println("-----Firefox Browser Launched-----");
-            
-        } else {
-            System.out.println("Invalid browser name");
-        }
-
-        
-        wUtil.MaximizeTheBrowser(driver);
-        wUtil.WaitforSpeceficTiming(driver, 10);
-    }
+//    @BeforeMethod()
+//    public void bmConfig(){
+//
+//        
+//        String environment = System.getProperty("environment");
+//        if (environment == null || environment.isEmpty()) {
+//            environment = "DEV"; 
+//        }
+//        pUtil = new PropertiesFileUtilities(environment);
+//
+//        
+//        String BROWSER = pUtil.getData("Browser");
+//
+//        if (BROWSER.equalsIgnoreCase("Chrome")) {
+//            WebDriverManager.chromedriver().setup();
+//            
+//            
+//            ChromeOptions options = new ChromeOptions();
+//            options.setAcceptInsecureCerts(true);  
+//            options.addArguments("--ignore-certificate-errors");  
+//            options.addArguments("--disable-web-security");  
+//            options.addArguments("force-device-scale-factor=1");  
+//            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+//            options.addArguments("ignore-certificate-errors");
+//            options.addArguments("--disable-blink-features=AutomationControlled");
+//            options.addArguments("--disable-dev-shm-usage");
+//            options.addArguments("--no-sandbox");
+//            //options.addArguments("--headless");
+////            options.addArguments("--disable-gpu"); // Applicable on Windows, but not needed on Linux
+//            options.addArguments("--remote-allow-origins=*");
+//            options.addArguments("--disable-dev-tools");
+//
+//            // Add headless option for Linux environments
+//            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+//                options.addArguments("--headless");  // Run in headless mode for Linux servers
+//                options.addArguments("--remote-debugging-port=9222");  // Required for headless mode
+//            }
+//
+//            driver = new ChromeDriver(options);
+//            System.out.println("-----Chrome Browser Launched with Security Settings and 100% Zoom-----");
+//            
+//        } else if (BROWSER.equalsIgnoreCase("Firefox")) {
+//            WebDriverManager.firefoxdriver().setup();
+//            driver = new FirefoxDriver();
+//            System.out.println("-----Firefox Browser Launched-----");
+//            
+//        } else {
+//            System.out.println("Invalid browser name");
+//        }
+//
+//        
+//        wUtil.MaximizeTheBrowser(driver);
+//        wUtil.WaitforSpeceficTiming(driver, 10);
+//    }
 
     @AfterMethod()
     public void amConfig(ITestResult result) {
@@ -119,8 +119,8 @@ public class BaseClass {
             System.out.println(messageBuilder.toString());
         }
         
-        driver.quit();
-        System.out.println("-----Browser Closed Successfully-----");
+//        driver.quit();
+//        System.out.println("-----Browser Closed Successfully-----");
     }
 
     //@AfterClass()
