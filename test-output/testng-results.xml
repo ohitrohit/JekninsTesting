@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-14T23:37:03 IST" name="Suite" finished-at="2024-12-14T23:37:07 IST" duration-ms="3989">
+    <groups>
+    </groups>
+    <test started-at="2024-12-14T23:37:03 IST" name="Test" finished-at="2024-12-14T23:37:07 IST" duration-ms="3989">
+      <class name="Testing.DiffrentName">
+        <test-method is-config="true" signature="BS_Config()[pri:0, instance:Testing.DiffrentName@16746061]" started-at="2024-12-14T23:37:03 IST" name="BS_Config" finished-at="2024-12-14T23:37:03 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BS_Config -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:Testing.DiffrentName@16746061]" started-at="2024-12-14T23:37:03 IST" name="bmConfig" finished-at="2024-12-14T23:37:06 IST" duration-ms="3675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="name()[pri:0, instance:Testing.DiffrentName@16746061]" started-at="2024-12-14T23:37:06 IST" name="name" finished-at="2024-12-14T23:37:06 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method is-config="true" signature="amConfig(org.testng.ITestResult)[pri:0, instance:Testing.DiffrentName@16746061]" started-at="2024-12-14T23:37:06 IST" name="amConfig" finished-at="2024-12-14T23:37:07 IST" duration-ms="230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=name status=SUCCESS method=DiffrentName.name()[pri:0, instance:Testing.DiffrentName@16746061] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="AS_Config()[pri:0, instance:Testing.DiffrentName@16746061]" started-at="2024-12-14T23:37:07 IST" name="AS_Config" finished-at="2024-12-14T23:37:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AS_Config -->
+      </class> <!-- Testing.DiffrentName -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
