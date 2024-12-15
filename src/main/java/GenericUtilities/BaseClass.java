@@ -40,15 +40,15 @@ public class BaseClass {
         
     }
 
-//    @BeforeMethod()
-//    public void bmConfig(){
-//
-//        
-//        String environment = System.getProperty("environment");
-//        if (environment == null || environment.isEmpty()) {
-//            environment = "DEV"; 
-//        }
-//        pUtil = new PropertiesFileUtilities(environment);
+    @BeforeMethod()
+    public void bmConfig(){
+
+        
+        String environment = System.getProperty("environment");
+        if (environment == null || environment.isEmpty()) {
+            environment = "DEV"; 
+        }
+        pUtil = new PropertiesFileUtilities(environment);
 //
 //        
 //        String BROWSER = pUtil.getData("Browser");
@@ -93,7 +93,7 @@ public class BaseClass {
 //        
 //        wUtil.MaximizeTheBrowser(driver);
 //        wUtil.WaitforSpeceficTiming(driver, 10);
-//    }
+    }
 
     @AfterMethod()
     public void amConfig(ITestResult result) {
